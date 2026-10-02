@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Planner — RF Academic</title>
+  <meta name="description" content="Plan and track academic tasks — add, complete, and delete assignments with real-time statistics." />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navigation.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="planner.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="../index.html" class="nav__brand">
+          <span class="brand-mark">RF</span>
+          <span class="brand-text"><span>RF</span> Academic</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../projects/projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <p class="section-label">Productivity</p>
+        <h1>Academic Task Planner</h1>
+        <p>Track assignments, readings, and study goals. Tasks are saved in your browser, so they stay even after you refresh.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container planner-layout">
+
+        <!-- Left: Form + Stats -->
+        <aside class="planner-sidebar">
+          <div class="planner-add">
+            <h3>Add a Task</h3>
+            <form id="task-form" novalidate>
+              <div class="form-field">
+                <label for="task-title">Task title <span class="req">*</span></label>
+                <input type="text" id="task-title" placeholder="e.g. Read Chapter 5 of COS 106" />
+                <span class="field-error" id="title-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="task-subject">Subject (optional)</label>
+                <input type="text" id="task-subject" placeholder="e.g. Web Technologies" />
+              </div>
+              <div class="form-field">
+                <label for="task-due">Due date (optional)</label>
+                <input type="date" id="task-due" />
+              </div>
+              <button type="submit" class="btn btn--primary">Add Task</button>
+            </form>
+          </div>
+
+          <div class="planner-stats">
+            <h3>Statistics</h3>
+            <div class="stat-row">
+              <span class="stat-label">Total Tasks</span>
+              <span class="stat-value" id="stat-total">0</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Completed</span>
+              <span class="stat-value stat-value--success" id="stat-done">0</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Remaining</span>
+              <span class="stat-value stat-value--warning" id="stat-remaining">0</span>
+            </div>
+            <div class="stat-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+              </div>
+              <span class="progress-text" id="progress-text">0% complete</span>
+            </div>
+          </div>
+
+          <div class="planner-filter">
+            <h3>Filter</h3>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="active">Active</button>
+              <button class="filter-btn" data-filter="done">Completed</button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right: Task List -->
+        <div class="planner-main">
+          <div class="planner-list-head">
+            <h2>Your Tasks</h2>
+            <button id="clear-done" class="btn btn--ghost btn--sm">Clear Completed</button>
+          </div>
+          <ul id="task-list" class="task-list">
+            <!-- Tasks rendered by JavaScript -->
+          </ul>
+          <div id="empty-state" class="empty-state">
+            <p>No tasks yet. Add your first task using the form on the left.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-brand-mark">RF</span>
+          <p>RF Academic is the personal academic portfolio of Ryan Favour Chukwuka &mdash; Computer Science student at MIVA Open University.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/about.html">About</a></li>
+            <li><a href="../projects/projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="../contact/contact.html">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="footer-year">2026</span> Ryan Favour Chukwuka. COS 106 Term Project.</span>
+        <span>Built with HTML, CSS &amp; JavaScript &mdash; no frameworks.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="planner.js"></script>
+</body>
+</html>

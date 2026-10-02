@@ -1,0 +1,346 @@
+/* =====================================================
+   Academic Planner — planner.css
+   ===================================================== */
+
+.planner-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+/* ----- Sidebar ----- */
+.planner-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  position: sticky;
+  top: 80px;
+}
+
+.planner-add,
+.planner-stats,
+.planner-filter {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+}
+
+.planner-sidebar h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  margin-bottom: var(--space-2);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* ----- Form ----- */
+.form-field {
+  margin-bottom: var(--space-1);
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.form-field .req {
+  color: var(--error);
+}
+
+.form-field input {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color var(--t-fast);
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(27, 77, 142, 0.1);
+}
+
+.form-field input.input-error {
+  border-color: var(--error);
+}
+
+.field-error {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--error);
+  margin-top: 0.3rem;
+  min-height: 1rem;
+}
+
+.planner-add form .btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* ----- Stats ----- */
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.stat-row:last-of-type {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-value--success {
+  color: var(--success);
+}
+
+.stat-value--warning {
+  color: var(--warning);
+}
+
+.stat-progress {
+  margin-top: var(--space-1);
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--surface-alt);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  border-radius: 4px;
+  transition: width var(--t);
+}
+
+.progress-text {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+/* ----- Filter ----- */
+.filter-buttons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  background: var(--surface-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--muted);
+  transition: all var(--t-fast);
+}
+
+.filter-btn:hover {
+  color: var(--text);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* ----- Task List ----- */
+.planner-main {
+  min-height: 400px;
+}
+
+.planner-list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.planner-list-head h2 {
+  font-size: 1.3rem;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-1);
+  align-items: start;
+  padding: var(--space-2);
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  transition: border-color var(--t-fast), opacity var(--t);
+  animation: slideIn 300ms ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.task-item:hover {
+  border-color: var(--border);
+}
+
+.task-item--done {
+  opacity: 0.55;
+}
+
+/* Custom checkbox */
+.task-check {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: var(--surface);
+  transition: all var(--t-fast);
+}
+
+.task-check:hover {
+  border-color: var(--primary);
+}
+
+.task-item--done .task-check {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.task-check::after {
+  content: "";
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform var(--t-fast);
+}
+
+.task-item--done .task-check::after {
+  transform: rotate(45deg) scale(1);
+}
+
+.task-body {
+  min-width: 0;
+}
+
+.task-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.task-item--done .task-title {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.35rem;
+  align-items: center;
+}
+
+.task-subject {
+  font-size: 0.76rem;
+  font-weight: 500;
+  padding: 0.15rem 0.5rem;
+  background: var(--surface-alt);
+  border-radius: 3px;
+  color: var(--primary);
+}
+
+.task-due {
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.task-due--overdue {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.task-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--muted-light);
+  padding: 4px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color var(--t-fast), background var(--t-fast);
+}
+
+.task-delete:hover {
+  color: var(--error);
+  background: var(--error-bg);
+}
+
+/* ----- Empty State ----- */
+.empty-state {
+  text-align: center;
+  padding: var(--space-5) var(--space-2);
+  color: var(--muted-light);
+  font-size: 0.95rem;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+}
+
+.empty-state.hidden {
+  display: none;
+}

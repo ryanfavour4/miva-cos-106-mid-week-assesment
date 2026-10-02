@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — RF Academic</title>
+  <meta name="description" content="Get in touch with Ryan Favour Chukwuka — send a message via the contact form." />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navigation.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="../index.html" class="nav__brand">
+          <span class="brand-mark">RF</span>
+          <span class="brand-text"><span>RF</span> Academic</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/about.html">About</a></li>
+          <li><a href="../projects/projects.html">Projects</a></li>
+          <li><a href="../planner/planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <p class="section-label">Contact</p>
+        <h1>Let's talk</h1>
+        <p>Whether it's a project collaboration, a question about coursework, or just a hello &mdash; I'd love to hear from you.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container contact-layout">
+
+        <!-- Contact Info -->
+        <aside class="contact-info">
+          <h3>Contact Information</h3>
+          <p class="contact-info__intro">Reach me through any of the channels below, or use the form to send a direct message.</p>
+
+          <ul class="contact-details">
+            <li>
+              <span class="contact-icon" aria-hidden="true">&#9993;</span>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:ryan.favour@example.edu">ryan.favour@example.edu</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">&#9742;</span>
+              <div>
+                <span class="contact-label">Phone</span>
+                <a href="tel:+2348000000000">+234 800 000 0000</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">&#9873;</span>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Lagos, Nigeria</span>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">&#9679;</span>
+              <div>
+                <span class="contact-label">University</span>
+                <span class="contact-value">MIVA Open University</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact-social">
+            <h4>Find me online</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">GitHub</a>
+              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+          <h3>Send a Message</h3>
+          <form id="contact-form" novalidate>
+            <div class="form-field">
+              <label for="name">Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your full name" />
+              <span class="field-error" id="name-error"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="text" id="email" name="email" placeholder="you@example.com" />
+              <span class="field-error" id="email-error"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input type="text" id="phone" name="phone" placeholder="08012345678" />
+              <span class="field-error" id="phone-error"></span>
+              <span class="field-hint">Digits only &mdash; no spaces or dashes.</span>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message <span class="req">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me what's on your mind..."></textarea>
+              <span class="field-error" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </form>
+
+          <!-- Success message -->
+          <div id="success-msg" class="success-msg hidden">
+            <div class="success-icon">&#10003;</div>
+            <div>
+              <h4>Message sent successfully!</h4>
+              <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-brand-mark">RF</span>
+          <p>RF Academic is the personal academic portfolio of Ryan Favour Chukwuka &mdash; Computer Science student at MIVA Open University.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/about.html">About</a></li>
+            <li><a href="../projects/projects.html">Projects</a></li>
+            <li><a href="../planner/planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="contact.html">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="footer-year">2026</span> Ryan Favour Chukwuka. COS 106 Term Project.</span>
+        <span>Built with HTML, CSS &amp; JavaScript &mdash; no frameworks.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

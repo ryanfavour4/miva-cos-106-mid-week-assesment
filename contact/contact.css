@@ -1,0 +1,245 @@
+/* =====================================================
+   Contact page — contact.css
+   ===================================================== */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+/* ----- Contact Info ----- */
+.contact-info {
+  background: var(--primary-dark);
+  color: #c4cdd8;
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  position: sticky;
+  top: 80px;
+}
+
+.contact-info h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: var(--space-1);
+}
+
+.contact-info__intro {
+  font-size: 0.9rem;
+  color: #9ba6b8;
+  margin-bottom: var(--space-3);
+  line-height: 1.5;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.contact-details li {
+  display: flex;
+  gap: var(--space-1);
+  align-items: flex-start;
+}
+
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8a94a4;
+  margin-bottom: 0.15rem;
+}
+
+.contact-details a {
+  color: #fff;
+  font-size: 0.92rem;
+  word-break: break-word;
+}
+
+.contact-details a:hover {
+  color: var(--accent-light);
+}
+
+.contact-value {
+  color: #c4cdd8;
+  font-size: 0.92rem;
+}
+
+.contact-social h4 {
+  color: #fff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+  padding-top: var(--space-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.social-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  transition: background var(--t-fast);
+}
+
+.social-link:hover {
+  background: var(--accent);
+  color: var(--primary-dark);
+}
+
+/* ----- Contact Form ----- */
+.contact-form-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form-wrap h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-2);
+}
+
+.form-field {
+  margin-bottom: var(--space-2);
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.form-field .req {
+  color: var(--error);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  font-size: 0.92rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(27, 77, 142, 0.1);
+}
+
+.form-field input.input-error,
+.form-field textarea.input-error {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
+}
+
+.field-error {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--error);
+  margin-top: 0.35rem;
+  min-height: 1rem;
+}
+
+.field-hint {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted-light);
+  margin-top: 0.3rem;
+}
+
+.contact-form-wrap .btn {
+  width: 100%;
+}
+
+/* ----- Success Message ----- */
+.success-msg {
+  display: flex;
+  gap: var(--space-1);
+  align-items: flex-start;
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--success-bg);
+  border: 1px solid var(--success);
+  border-radius: var(--radius);
+  animation: slideIn 300ms ease;
+}
+
+.success-msg.hidden {
+  display: none;
+}
+
+.success-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background: var(--success);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.success-msg h4 {
+  color: var(--success);
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.success-msg p {
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
