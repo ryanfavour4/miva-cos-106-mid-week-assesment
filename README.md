@@ -1,4 +1,4 @@
-# RF Academic — Student Academic Portfolio
+# RyanNova — Student Academic Portfolio
 
 A multi-page student academic portfolio and management website built for the **COS 106 Introduction to Web Technologies** term project.
 
@@ -10,7 +10,7 @@ A multi-page student academic portfolio and management website built for the **C
 
 ## About
 
-RF Academic is a personal academic portfolio featuring a homepage, about page, projects showcase, an interactive academic task planner, and a contact form with JavaScript validation. The entire site is built with **only HTML, CSS, and vanilla JavaScript** — no frameworks, no build tools, no package managers.
+RyanNova is a personal academic portfolio featuring a homepage, about page, projects showcase, an interactive academic task planner, and a contact form with JavaScript validation. The entire site is built with **only HTML, CSS, and vanilla JavaScript** — no frameworks, no build tools, no package managers.
 
 ## Folder Structure
 
